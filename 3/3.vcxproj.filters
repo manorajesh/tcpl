@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="3.5.c">
+    <ClCompile Include="shellsort.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

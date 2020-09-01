@@ -138,15 +138,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\2-3\2-3.c" />
-    <ClCompile Include="2-10.c" />
-    <ClCompile Include="2-4.c" />
-    <ClCompile Include="2-5.c" />
-    <ClCompile Include="2.c" />
-    <ClCompile Include="atoi.c" />
-    <ClCompile Include="binsearch.c" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

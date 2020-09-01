@@ -14,27 +14,4 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\2-3\2-3.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="atoi.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="2-4.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="2-5.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="2-10.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="binsearch.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>

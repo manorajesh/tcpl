@@ -18,11 +18,11 @@ int binsearch(int x, int v[], int n)
 	return -1; // no match
 }
 
-int main()
+int binmain()
 {
 	int c = 0, i;
 	
-	int scad[1000];
+	int scad[999];
 	for (i = 0; i <= 1000; i++)
 		scad[i] = i;
 
