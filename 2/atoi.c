@@ -13,5 +13,5 @@ int atoi(char s[])
 
 int maina()
 {
-	atoi	("123");
+	atoi("123");
 }
