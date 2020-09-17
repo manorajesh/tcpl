@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="clock_converter.c">
+    <ClCompile Include="3.6.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
