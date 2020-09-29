@@ -2,7 +2,15 @@
 #include <ctype.h>
 
 /*
-itoa: convert n to characters in s
+In a two's complement number representation, our version of itoa does
+not handle the largest negative number, that is, the value of n equal
+to -(2^wordsize-1). Explain why not. Modify it to print that value
+correctly, regardless of the machine on which it runs.
+*/
+
+/*
+In a two's complement number representation, the lowest negative number
+would be -(2^wordsize-1) and (2^wordsize-1) - 1, because there is one place for the number 0.
 */
 
 void reverse(char s[])
@@ -15,6 +23,7 @@ void reverse(char s[])
 		s[j] = c;
 	}
 }
+
 
 void itoa(int n, char s[])
 {
@@ -34,7 +43,7 @@ void itoa(int n, char s[])
 
 int main()
 {
-	int c = 63;
+	long signed int c = -363;
 	char output[1000 + 1];
 
 	itoa(c, output);
