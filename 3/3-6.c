@@ -1,8 +1,13 @@
 #include <stdio.h>
-#include <ctype.h>
 
 /*
-itoa: convert n to characters in s
+Write a version of itoa that accepts three arguments instead of two.
+The third argument is a minimum field width; the converted number must
+be padded with blanks on the left if necessary to make it wide enough.
+*/
+
+/*
+Bugs: Using zeros as the first argument doesn't work, returns a single zero.
 */
 
 void reverse(char s[])
@@ -24,14 +29,15 @@ void itoa(int n, int fw, char s[])
 		n = -n;								// make n positive
 	i = 0;
 	do {									// generate digits in reverse order
-		v = n;
-		if (v == 0)
-			while (i != fw)
-				s[i++] = ' ';
-	
 		s[i++] = n % 10 + '0';				// get next digit
-	} while (((n /= 10) > 0) || i != fw);	// delete it
-		if (sign < 0)
+	} while (((n /= 10) > 0));				// delete it
+
+	while (i < fw) {						// add spaces if i is less than field width
+		while (i < fw)
+			s[i++] = ' ';
+	}
+
+	if (sign < 0)
 		s[i++] = '-';
 	s[i] = '\0';
 	reverse(s);
@@ -39,7 +45,7 @@ void itoa(int n, int fw, char s[])
 
 int main()
 {
-	int c = 63, i = 10;
+	int c = 00000, i = 5;
 	char output[1000 + 1];
 
 	itoa(c, i, output);
