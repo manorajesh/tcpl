@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="4-1.c">
+    <ClCompile Include="vigerene.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
