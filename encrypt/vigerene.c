@@ -85,9 +85,14 @@ int main()
 
 	for (i = 0, j = 0; plaintext[i] != '\0'; ++i) {
 		if (isalpha(plaintext[i])) 
-			ciphertext[j++] = vigenere(key[j % l], plaintext[i]);	// using j to skip spaces
+			ciphertext[j++] = vigenere(key[j % l], plaintext[i]);	// using j to skip spaces & modulo to "wrap" around key
 	}
 	ciphertext[j] = '\0';
 
 	puts(ciphertext);
 }
+
+/*
+I am aware it is convention to keep each line less than or equal to
+72 characters
+*/
