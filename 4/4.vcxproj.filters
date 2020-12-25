@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="4-1.c">
+    <ClCompile Include="atof.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="4-2.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
