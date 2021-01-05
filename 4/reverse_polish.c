@@ -9,7 +9,6 @@
 
 int getop(char[]);
 void push(double);
-void modpush(int);
 double pop(void);
 
 int sp = 0;				// next free stack position
@@ -52,9 +51,9 @@ main()
 				printf("error: zero divisor\n");
 			break;
 		case '%':
-			modop2 = modpop();
-			if (modop2 != 0.0)
-				modpush(modpop() / modop2);
+			op2 = pop();
+			if (op2 != 0.0)
+				push((int)pop() % (int)op2);
 			else
 				printf("error: zero divisor\n");
 			break;
@@ -78,26 +77,8 @@ void push(double f)
 		printf("error: stack full, can't push %g\n", f);
 }
 
-void modpush(int f)
-{
-	if (sp < MAXVAL)
-		val[sp++] = f;
-	else
-		printf("error: stack full, can't push %d\n", f);
-}
-
 // pop: pop and return top value from stack
 double pop(void)
-{
-	if (sp > 0)
-		return val[--sp];
-	else {
-		printf("error: stack empty\n");
-		return 0.0;
-	}
-}
-
-int modpop(void)
 {
 	if (sp > 0)
 		return val[--sp];
@@ -115,15 +96,18 @@ int getop(char s[])
 	while ((s[0] = c = getch()) == ' ' || c == '\t')
 		;
 	s[1] = '\0';
-	if (!isdigit(c) && c != '.')
+	if (!isdigit(c) && c != '.' && c != '-')
 		return c;		// not a number
 	i = 0;
-	if (isdigit(c))		// collect integer part
+	if (isdigit(c) || c == '-') {		// collect integer part with sign
+		if (c == '-' && !isdigit((s[2] = getch())))
+			return c;
 		while (isdigit(s[++i] = c = getch()))
 			;
-	if (c == '.')		// collect fraction part
-		while (isdigit(s[++i] = c = getch()))
-			;
+		if (c == '.')		// collect fraction part
+			while (isdigit(s[++i] = c = getch()))
+				;
+	}
 	s[i] = '\0';
 	if (c != EOF)
 		ungetch(c);
