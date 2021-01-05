@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="atof.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="4-2.c">
+    <ClCompile Include="reverse_polish.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
