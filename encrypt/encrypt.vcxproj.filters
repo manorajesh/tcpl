@@ -18,5 +18,8 @@
     <ClCompile Include="vigerene.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="frequency_analyzer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

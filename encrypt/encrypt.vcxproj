@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="frequency_analyzer.c" />
     <ClCompile Include="vigerene.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
