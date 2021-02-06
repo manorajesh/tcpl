@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="reverse_polish.c">
+    <ClCompile Include="4-12.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="4-13.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
