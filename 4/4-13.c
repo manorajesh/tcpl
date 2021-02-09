@@ -1,3 +1,7 @@
+/*
+* Write a recursive version of the function reverse(), which reverses
+* the string s in place
+*/
 #include <stdio.h>
 #include <string.h>
 
@@ -22,7 +26,7 @@ void reverse(char s[], int l, int h)
 	char c;
 
 	if (l < h) {
-		c = s[l];
+		c = s[l];								// s[0] -> s[4] && s[4] -> s[0]
 		s[l++] = s[h];
 		s[h--] = c;
 		reverse(s, l, h);
