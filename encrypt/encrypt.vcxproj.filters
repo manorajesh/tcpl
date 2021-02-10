@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="vigerene.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="frequency_analyzer.c">
+    <ClCompile Include="caesar_shift.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
