@@ -18,5 +18,11 @@
     <ClCompile Include="getint.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="5-1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="5-2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

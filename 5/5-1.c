@@ -20,7 +20,7 @@ int main()
 }
 
 /* getint: get next integer from input into *pn */
-int getint(int *pn)
+int getint(int* pn)
 {
 	int c, sign;
 
@@ -30,18 +30,21 @@ int getint(int *pn)
 		ungetch(c);		// it's not a number
 		return 0;
 	}
-	
+
 	sign = (c == '-') ? -1 : 1;
-	
-	if (c == '+' || c == '-')
+
+	if (c == '+' || c == '-') {
 		c = getch();
+		if (!isdigit(c))		// check if next character is a digit
+			ungetch(c);
+	}
 	for (*pn = 0; isdigit(c); c = getch())
 		*pn = 10 * *pn + (c - '0');
 	*pn *= sign;
-	
+
 	if (c != EOF)
 		ungetch(c);
-		return c;
+	return c;
 }
 
 int getch(void)			// get a (possibly pushed back) character
