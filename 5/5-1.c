@@ -1,3 +1,7 @@
+/*
+As written, getint treats a + or - not followed by a digit as a valid
+representation of zero. Fix it to push such a character back on the input.
+*/
 #include <stdio.h>
 #include <ctype.h>
 
@@ -28,14 +32,14 @@ int getint(int* pn)
 		;
 	if (!isdigit(c) && c != EOF && c != '+' && c != '-') {
 		ungetch(c);		// it's not a number
-		return 0;
+		return 0; 
 	}
 
 	sign = (c == '-') ? -1 : 1;
 
 	if (c == '+' || c == '-') {
 		c = getch();
-		if (!isdigit(c))		// check if next character is a digit
+		if (!isdigit(c) || c == ' ')		// check if next character is a digit
 			ungetch(c);
 	}
 	for (*pn = 0; isdigit(c); c = getch())

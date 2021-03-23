@@ -1,3 +1,7 @@
+/*
+Write getfloat, the floating-point analog of getint. What type does
+getfloat return as its function value?
+*/
 #include <stdio.h>
 #include <ctype.h>
 #include <math.h>
@@ -16,16 +20,16 @@ double getfloat(double* pn);
 
 int main()
 {
-	int e = 1023;
+	int e = 10.23;
 
-	getint(e);
+	getfloat(e);
 	printf(e);
 }
 
 /* getfloat: get next floating-point from input into *pn */
 double getfloat(double* pn)
 {
-	int c, sign, fp;
+	int c, sign, fp = 0;
 
 	while (isspace(c = getch()))	// skip white space
 		;
